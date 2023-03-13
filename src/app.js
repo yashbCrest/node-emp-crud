@@ -2,7 +2,8 @@ const express = require("express");
 require("./DBConnection/conn");
 const employee = require("./Routers/employeeRoute");
 const app = express();
-const port = process.env.PORT || 8000;
+require('dotenv').config()
+const port = process.env.port;
 const cors = require('cors');
 
 //Insert data in user collection and getting from API and
